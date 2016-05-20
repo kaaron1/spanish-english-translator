@@ -6,7 +6,7 @@ $(function() {
 		var textToTrans = $("#txtToTranslate").val();
 		
 		$.ajax({
-			  method: "GET",
+			  method: "POST",
 			  url: "SimpleServlet",
 			  data: { txtToTranslate: textToTrans}
 			})

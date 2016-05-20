@@ -76,11 +76,12 @@ public class SimpleServlet extends HttpServlet {
 
 
 	/**
-     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
      */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	final String txtToTranslate = request.getParameter("txtToTranslate");
+    	System.out.println("Text to translate={" + txtToTranslate + "}");
     	
     	//Translate the text from Spanish to English
     	final LanguageTranslation service = new LanguageTranslation();
@@ -104,7 +105,7 @@ public class SimpleServlet extends HttpServlet {
     	final JSONObject resultsJSONObj = new JSONObject();    	
     	resultsJSONObj.put("translated", translated);
     	resultsJSONObj.put("topClassification", topClassification);
-    	
+    	resultsJSONObj.put("original", txtToTranslate);    	
     	
     	final JSONObject retJSONObj = new JSONObject();
     	
