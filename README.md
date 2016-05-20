@@ -1,4 +1,4 @@
-# spanish-english-translator
+# Spanish English Translator
 A simple Java web page to translate Spanish text to English. Once translated, the text is sent to a Watson Natural Language Classifiers. This project can easily be setup in Bluemix following the instructions below. The instructions use basic weather classifier with only two classes: temperature and conditions. More information on classifiers can be found [here](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/nl-classifier/).
 
 # Bluemix Setup
