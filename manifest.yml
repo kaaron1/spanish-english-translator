@@ -1,0 +1,11 @@
+applications:
+- path: target/JavaHelloWorldApp.war
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: spanish-english-translator
+  host: spanish-english-translator
+  disk_quota: 1024M
+  services:
+  - Natural Language Classifier-yk
+  - Language Translation-xz

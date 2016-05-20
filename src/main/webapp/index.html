@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Spanish to English to NLC Classification</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet"	href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script	src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<style>
+
+/* stack all grids below 40em (640px) */
+@media all and (max-width: 40em) {
+	.my-breakpoint .ui-block-a, .my-breakpoint .ui-block-b, .my-breakpoint .ui-block-c,
+		.my-breakpoint .ui-block-d, .my-breakpoint .ui-block-e {
+		width: 100%;
+		float: none;
+	}
+}
+
+#translateBtn {
+	min-width: 150px; margin-left : auto;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+</style>
+</head>
+<body>
+
+
+	<div data-role="page">
+
+		<div data-role="header">
+			<h1>Let's Translate!</h1>
+		</div>
+		<!-- /header -->
+
+		<div role="main" class="ui-content">
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<!-- <div class="ui-bar ui-bar-a"> -->
+					<label for="txtToTranslate">Spanish Text</label>
+					<!-- </div> -->
+				</div>
+				<div class="ui-block-b">
+					<!-- <div class="ui-bar ui-bar-a"> -->
+					<label for="txtTranslated">English Text</label>
+					<!-- </div> -->
+				</div>
+				<div class="ui-block-a">
+					<div class="ui-bar ui-bar-a">
+						<textarea name="txtToTranslate" id="txtToTranslate"
+							class="ui-input-text ui-shadow-inset ui-corner-all"
+							data-clear-btn="true" placeholder="Place spanish text here"></textarea>
+					</div>
+				</div>
+				<div class="ui-block-b">
+					<div class="ui-bar ui-bar-a">
+						<textarea name="txtTranslated" id="txtTranslated"
+							placeholder="Translated text will show here"></textarea>
+					</div>
+				</div>
+			</div>
+
+			<div class="ui-grid-solo">
+				<div id="controls" class="ui-block-a">
+					<button id="translateBtn" class="ui-btn ui-shadow ui-corner-all"
+						data-theme="b" disabled="disabled">Click Here To Translate</button>
+				</div>
+			</div>
+
+<br />
+<br />
+<br />
+
+			<div class="ui-grid-solo">
+				<div id="classifications" class="ui-block-a">
+					<label for="classifications">Top Classification</label>     
+					<textarea name="classifications" id="classificationsData"></textarea>
+				</div>
+			</div>
+
+
+		</div>
+		<!-- /content -->
+
+	</div>
+
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
